@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>台式查詢</title>
+<title>所有開團查詢</title>
 </head>
 <body>
 <?php
@@ -11,12 +11,12 @@ $link = mysqli_connect("acw2033ndw0at1t7.cbetxkdyhwsb.us-east-1.rds.amazonaws.co
         or die("無法開啟MySQL資料庫連接!<br/>");
 mysqli_select_db($link, "gk4xqozmcqv07zee");  // 選擇gk4xqozmcqv07zeev資料庫
 // 查詢台式
-$sql = "SELECT date,kind,food,pay,place,dmoney,takemoney,people,inviteurl FROM delivery where kind='台式'";
+$sql = "SELECT date,kind,food,pay,place,dmoney,takemoney,people,inviteurl FROM delivery";
 // 送出查詢台式的SQL指令
 if ( $result = mysqli_query($link, $sql) ) { 
    // 取得記錄數
    $total_records = mysqli_num_rows($result);
-   echo "<center>台式</center><br/>"; 
+   echo "<center>所有開團訊息</center><br/>"; 
    echo "<center>共 $total_records 團</center><br/>"; 
    echo "<center><table border=><tr>";
 // 顯示欄位名稱
